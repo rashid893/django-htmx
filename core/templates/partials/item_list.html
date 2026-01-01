@@ -1,0 +1,11 @@
+
+<table class="w-full border">
+ <tr class="bg-gray-200">
+  <th>Name</th><th>Description</th><th>Actions</th>
+ </tr>
+ {% for item in items %}
+  {% include 'partials/item_row.html' %}
+ {% empty %}
+  <tr><td colspan="3">No items</td></tr>
+ {% endfor %}
+</table>
